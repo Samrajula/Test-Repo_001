@@ -1,0 +1,213 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Initialize_Applications" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>788,2874.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Initialization_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="62">
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Management.Automation</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="46">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Management.Automation</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>TimeSpan2</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="550.4,2809.6" sap2010:WorkflowViewState.IdRef="Sequence_9">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="508.8,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;Opening applications...&quot;]" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="508.8,676" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,589.6" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="sd:DataTable" Name="DT_JDE_AB" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[DT_JDE_AB]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="433.6,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="Data\Check Address.xlsx" />
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DT_JDE_AB]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="433.6,368.8" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="375.2,248" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Add Queue Item" sap:VirtualizedContainerService.HintSize="333.6,22.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_2" Priority="Normal" QueueType="JDEABQueue">
+                      <ui:AddQueueItem.ItemInformation>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_Empname">[currentrow("Employee Name").tostring]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Argument1" />
+                      </ui:AddQueueItem.ItemInformation>
+                    </ui:AddQueueItem>
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Names added to queue&quot;]" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEachRow.Body>
+            </ui:ForEachRow>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: JD Edwards" sap:VirtualizedContainerService.HintSize="508.8,1836.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="d1bc0f98-de0d-4b00-be65-903eaffa6301" Version="V1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,1620" sap2010:WorkflowViewState.IdRef="Sequence_13">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'User ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Text="[in_Config(&quot;user&quot;).ToString]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeLoginAction=LOGOUT&amp;RENDER_MAFLET=E1Menu" DesignTimeRectangle="920, 521, 207, 33" ElementType="InputBox" FriendlyName="'INPUT User'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='User ID' /&gt;" Guid="d0bc340b-6ad1-4dad-b99a-b7f1189a1baf" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANMAAAAlCAYAAADYzNzdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHbSURBVHhe7d1JSgNREIBhT+I8nUNcOE+HEKcYhxuIl9IDZKlbcWEQFIkLJYIYnFqrsZpK52V4SYGC/+KDmKSf1d3vJ7pK3/BCIbGG5nfqfv7rRhZ3U/p4dKn4q3SeVrPovLEzjy3vpcZX9lMTqweZybXDnsgaum4vdEY7a/45FTpHYa9PiOxRMTC7leqf2XQxOLed7f9299DSeYnpm67R7fGxdN5OZ7YbUDanZ0TKIyY7Zyuhc7T3QK+N0niEbHjhFZGso2vaGXSu/Mz2sZ1XZvu3Melx3R4fkl8z9B4hr9n5Q+/RmyjshvUMSNgw7e+JYWdtJXSeeq30elihiEJBdEtC0v3e7j7kn7cz64xZTFPrR8lJ6Swp39wB6ID0It1oQ1lM8sLF1XVyWS4D6ID0It1IP/JJlcUkpd1WKgAiSDf6J2JdTI/VJwARpBv9P6oupueXGoAITWOqvb4BiNA0pvePTwARiAlwQkyAE2ICnBAT4ISYACfEBDghJsAJMQFOiAlwQkyAE2ICnBAT4ISYACfEBDghJsAJMQFOiAlwQkyAE2ICnBAT4ISYACfEBDghJsAJMQFOiAlwEoxJvhrj/qEaPABAI+nltHTeGBNfdgbEkZCmN45/YiomXy/FOc8Zre2FAAAAAElFTkSuQmCC" InformativeScreenshot="8f369bbdadb4a7c93ff6edfb2455b151.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_3621604959390118912' title='JD Edwards' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="855, 529, 55, 18" ElementType="Text" FriendlyName="'User ID'" FullSelectorArgument="&lt;webctrl tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' aaname='User ID' check:text='User ID' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADsAAAAWCAYAAAB+F+RbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALTSURBVFhH3Zc9VhsxEMd9EkhwDgMJyT3yQXwEyBkI9K7A6fKcjo90IVVsqriA0u/xXO4FlB1JI/1nJJnVBjcUv2dWO5qZ30orm8HLN5/MY+zsHwSGbz+bV+9GARrb3vtgtnbfJ7x4/VHMZXROHF9HbTzD8VWyWpSuafzZyHJgrSiN43wilzd3r0TtHB3fSfYpRAmdt3SvRO0cHb9WlgJKorRF14ny/BJYpyt9c3B8VhYTalkao5icLIniXI7VYwjW1eg4vOaxLnC8lJ3emaZZmcsTd1OKfjOXD41pFtdFUUzM5MYQUV+BcYc3K9M8zMxRGJu4fpoMbdxhJk8vWS1K0APAxF0R9RUYd+Rlo8R56EfPGy9I+t6MoQZ9dpalJ3lByf9eJaJ9VlXULYDxNbJh1dt7mEPI7kzvs7L0SckT2eM/Zim2UHyahM15MpMxvgGuabfnYha3JDTPeYg62XaOciHysqdOkKHARNaLzqexgN0++F550eXNxBf0TxyatrI25jz0wbg5jmpZX3s+jTmKshxA0L2t3TMp+523PBRQJPJEaMLNc7J3Zux7QDBXtez+tZnXyNK7SLhtK2W3965sMrcqE1UoFouryrjV5ZXkUzZKQD8w739keSzI0sUwI+tEo+zy15kdd7970+M/PklXDO8h/BA2JgvbmMcGmHB4SgElWbeSJJv/mmFx2tp0XVpZSSqhmi7GdTmg3IHJY0HWnbw/zW3b4O2PkQ2Ioi32QFqZi6/5/2Qc+J7kj38ZEyXwvRZNex6TxdhSbSU7Ml9+t0lJ6hhE/aqKxLzl4Wi3DeHXT3Iap4fWJmT1jwrGyrIof6c6EZoQoe2rk6ZxUt7ihUOMaDgeUDlZJH23vSzmhhriG8AzQFGCBuW76tDvKf5di57rmu8P5lrHAEVJvPQjPze5D7kGsfE+YK51CFka2KRsrtGnIFcrR5Cli5zo85E9MP8Aa37vcJDnf+IAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Password'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Text="[in_Config(&quot;pwd&quot;).ToString]" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeLoginAction=LOGOUT&amp;RENDER_MAFLET=E1Menu" DesignTimeRectangle="920, 560, 207, 33" ElementType="InputBoxPassword" FriendlyName="'INPUT Password'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='password' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='password' aaname='             Password         ' /&gt;" Guid="82a53583-c17c-4214-af18-cecb0ffa9fb2" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANMAAAAlCAYAAADYzNzdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHPSURBVHhe7d3JSsNAGMBxn8R9ew5RcN8eQupalzcQfSj7APVmr+LBIihSD0oFsbiNfIUvpMm0yeh3COV/+EFKO8kkmT89zsDo8r5TI0t70XFRja+WIxNrh25y/chNbRxHpjdP/kXOIecMJXPJS+c/tnLgvUch72J4cdcNzm+bGVrYaZ9XyfVV/LkKnadvXkI/+8b2Om9SyG+LrvAx+R62LkpZxBYBqWQgeehceok/cCX3k7xXXaiy6IUviL/SkPRayWeaZ256rGOzxnf7vl8VOqbky9DFqQvZMiQRjyRLPJZe4vNXutiURqR8MYSSeOSfTem7lWurrLnpfPRz1lil58j6Xb+JYprZOnUX1StXv38EkEOlWnOzpbN0TBLS9e2du6nXAeQgvUhQqZiktIdGA0AA6cYb00vzFUCArjG9vbcABOgaU+vjE0CArjF9ff8ACEBMgBFiAowQE2CEmAAjxAQYISbACDEBRogJMEJMgBFiAowQE2CEmAAjxAQYISbACDEBRogJMEJMgBFiAowQE2CEmAAjxAQYISbACDEBRogJMEJMgJFUTHIgW2M8PTe9AwCkSS8dW8rI7m6yw91c6dxVLmvt0gBk69zsrOx+AXCMOfu+lhv6AAAAAElFTkSuQmCC" InformativeScreenshot="def494f4e8a48ca2c8f1bc6115197416.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_3621604959390118912' title='JD Edwards' /&gt;" SearchSteps="FuzzySelector, Image">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="839, 568, 71, 18" ElementType="Text" FriendlyName="'Password'" FullSelectorArgument="&lt;webctrl aaname='             Password         ' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='             Password         ' tag='LABEL' type='' check:text='Password' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEsAAAAWCAYAAACIXmHDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANhSURBVFhH7Ze/chQxDMZ5EuCAhwEOeI8AgScIyTsw6ZOKpGSuzaTMdZfruCJX3kwm5b3AYsn6bNkrr735B8xQ/Ca3kizJ38qezZPJ9HOnefFul3n14Svz8v0Xfn725mP39PVOAtnydQ9JrQ56qWGtbaEqFv1+/vZTTyiIhfjHIO8RttxfQ68fgykWhPovVkpPLDp2rULlhZFD2+4TKz9sY9Drx1AV62+4q4DuM6c1jtCxYzCPIQlGlKaK7Eig1z00us+hulacxlrTQiLW8Wrbbbc2m4sfplh/At2zZauhcxWZrd2+b7qzw2jri3V92R04Bz2Hafq+6DYiGGKTxI8MetB9aFsNnatISSw8QKx9Z8vvqr2LG+dbsK+54AOhN34brJw9WsX6ZlzqLNb2qjsO8afd2XU8pszqPORiDi95ImPMujtu9B/MqV4a7239HjbzkyDEPsfEnNqH+OU81l3OJD+Lg3VOpPmAWHShQ6y9TCji6Jf30RENQjlxQiOy8c381CeX59CMQx/zNr9uFi+HbBDrvFtKDuqB14uf+wo9nRg5kNchQoVeZF1PLPwYFOvnFSdLhVBNkVhKQI4xxjih5hch8pobmoyZ1J1RXzJ9skEIB/ykuWnknFmPRRumuCYWK9qHGkQs4IbCWxBCUb9ZsoUNJ9T8MmlafPcbNqrd88vmtFjoz0+NFyatF6cz2hzGy2Sx8F1Vmqz8U2EyPZFxFrh5saF5BmMfSZuq+LlhPznUG08UTZPrcV/qYcp07CixEr+C7QNiHbFYi0Qs898aHv80kS2WBsKk6wb9oWHy0V9s3v2ewSeihJ7kORHL202xbjNZ9Ndf4lEsSyiC7wFcxEI4jkWxiEJjRb9sbrV2d5X/pJlMfczGiecnTItCa+VZCHcWP/sXmoolLynru3hnkViUOBeLbAjU+LfY3xQfJYhovJnkc6DmT2x+MxCArwsSTD4LEOvtfoo4VgSMnw+WWA7uRe0HLz4XC0eQxGkWy9nDJgRqyDerNitNRNLiVb+KoY34DWNaoiiIjb6YM520glhE0ovLbX1n4QiSODm6EU0sXsdaf1tqebW/FStPCRaLFv3rYmnfGPI8QzSLpQuMQRe7K0P5LV+OFQtbC3zB06KSWHclL3gfWHVasHK1s9v9BnrDMUU27ubCAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'Sign In'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeLoginAction=LOGOUT&amp;RENDER_MAFLET=E1Menu" DesignTimeRectangle="1064, 626, 65, 35" ElementType="Button" FriendlyName="'Sign In'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Sign In' check:text='Sign In' /&gt;" Guid="589e652c-1627-4d42-acc5-e81fe145e6ca" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEUAAAAnCAYAAABZsYV4AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAASnSURBVGhD7ZrZUhtHFIZ5kqzOcq9HSKqyO8tLIIxGzvIICYuTAtmPEC9cUICVW6cqERUvwRBDKikgVTZybIIQSEhCBoHA/Olzunump2dGAhtzwUhVP63T55zu09/0tERpus6cPQ9Tr3+SxmsfOyx6b/tPq9749Eu89fnXePuLb9CBotSBEqI3P/sqCOXd5Hf4+fc55JcLsdPkzN94r3eAgfigEJDq5hPE8VUR675xZy4IhYjtNvewtd2InWjdtP5QKNXNemzVgRKiSCiV2mZs1YESokgo5WoNG0JxbDtQQtpIKKVKFeVKLZZtB0pIGwllfaNiqBrRnk5/GyhRg53uNhLKWnlDqGIo3J68kEAi4Sk5smT4b6Gf+wcxecjxntX+Z6RH1nDhVqj/KHYLKGZCuGwgWh6YGQxz3zCmrdzj1r8TaTn/xZlQ/1EUCaVYKgttGLLt3/ADLziNbFH+h1n6SRWWGsUix+9gjz372G473vPZJpQw/1HsI0CxNYMhhpJAavQB99WbB4wAB3uoc/5N9HHMAHJu3gNcScq8RKIHVxa1Te9lTG5Q+vtyZqzQ4E01BslfXwDK4jUkyU6OYDE34I3hzhO9vkgoq+vlNtrBvUt6Iqm+nB2jwQ3jLtv3cbnbn5NI9CLlUJvGWF7m3b1ox3gKziH10IDCfflxpK1cV+euYcHKN/UcUMrY3i8hywsy1YPLCzrGgrIwihTb3i2H2YzKC4HiZFHiIG8eZ+y+O7+pVlAyszyIMdcQ7lj5piKhFNZKh9AWdumOKWatq9KPX9hvQCH79pD0X5rDbl2N0SiqBQsoS7JPQ0lnC9hU8xSyctHOxGOZZ8mEwn1L43B47gzuNVRcYxYZ7lP1RKglFKJWUPRa2k+aeEpXwoXjYHSe/H4oq1PDvsJl/mOMGbcPjaehZKYFDBpfSC+aoATmN/x6pxAUrsWZwLIbb9Vj5JvjPftO+bVfFtF9FfO6r/6H+gjWV93aKY8mFLQUfhTQ5Djfy3FCdsrQlIoRMqHoPlORO8UZx0M3zqonQoeDokj6bHcrhsi5LgBRrFVEvYDrgTPIQTri9nGhiPl8UELq8UEhvwnFjY+AYo0XCWWluI4VEeAqYDfEd5CQg5YOx4MmahzvFTHFNp1BZg4duOsKlIRCY08ZUPR8+XEPipzfX4/2ExTuM6Dk3Xi7Hi/fHE9Dod9+/FCEk6i1btVBa74EEDocpd/78rZF9vxVdHNR+hPhALtL3ieShrK9z0nYEweknq+mvgM9bYpzRtj+Ojw/9ndkf12dc63qcfv9rYZCP4oFd4oWBR+HHXr7KPEtZ8Xb+SdkR0OhwGMX7aw/g2eRvuVCc05eGgr9puyD8p8g9mJEZ5H1UmdQePzJqyUU2kpxbGn9dMgSCz+U1TUOcBUjm9ZPu4SetOjSj1vonRJXaSj0CEoX/dFQlgW5uIrWTxxcKCQNhajFsdVQ+PZ55cNehpKb/guPVoocEDfRum/cnmUgDOXlD84xlHe6v2UHEYubaN30JBdxYCgvvd+DVz9KuZRIZOs+CqT3tKMo9kWJLo6e15QuVIu2eDuZD/W1E8XRt1i91jNnz+N/VKq+OfdgOrQAAAAASUVORK5CYII=" InformativeScreenshot="ee4fa2499add26d06935058d6501af72.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_3621604959390118912' title='JD Edwards' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'DIV drop_mainmenu'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeowpBackButtonProtect=PROTECTED" DesignTimeRectangle="423, 103, 45, 44" FriendlyName="'DIV drop_mainmenu'" FullSelectorArgument="&lt;webctrl id='drop_mainmenu' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='drop_mainmenu' tag='DIV' type='' aaname='' /&gt;" Guid="fd712c1d-8d59-43fe-976e-071b7e641ee5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADEAAAAwCAYAAAC4wJK5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAOKSURBVGhD7ZjbSxVRFMb7SzKzrCAk6KHooYckIVMzowuIRvSghdcyNfESaZoZiRRqhl0EpTwJoqXhUfB4C81LWNmfs9q/LSPHaTzHGaWZE/PwMczea31nfXvWZebs2ZtaKLEOX4RX4IvwCnwRXoEvwivwRXgFvgivYNdExCkcunhHTuRUS3L+I0kvbpGsu8/kUlmrvnLPOvvYYW/F4wS7IiIho1SOXauUcwXNcq+1V14GgjI0uSiTCz9lamlNX7lnnX3ssMfPis8udiwiIaNEUm41StPrQRmdXZGJ+R8S+vZLBx9aXJOxue/6qu/VOvvYYY8f/la8drAjEYezyiS3pkM6+4PyeWpJJlWQXQMTUtHWJ9lVzyW1sFlSbjfpK/ess48d9p2Bcbmu/OGx4t8uHIvgBAmg62NQRqaX5cOXOSlTqUL+n7pRJ0dUYEbec+Wedfaxw35kekX5rwvZyRNxJIJcJhXIcQLpGQ5JweM3knS1QuLTi3XQceeLLH3j04q1Hfb44Q/Pemo5qxHbIgiQoiSnSQlOlICMk4xPK5KkK5XK5r7sV4LM/gawxw9/eOCD10nXsi0iUbVHugvFSW7TbTjZjf3MUil52iM17f1yMrd2k68Z+OEPD3zwwm9lGwm2RdDn+eGJ+VVdpOQ4KWLsE0RtZ0A+hZakvX9Mcqrb5ejl8k0cBvDDHx744IXfyjYSbItIzm/QOUy7pNtQrOH7iKjvGpBp1VKDX1fl3VBIytt65azK+cTMv08Zf3jggxd+s0002BbB5GVw0fezq17orhO+b4iYWf69geHQojR2D0p6UYvsMxU8/vDABy/84fvbgW0RvEZwagww+r+5EK1EAHzqOgJywNRK8YcHPmzgD9/fDhyJ4NSYxAwy8/5WIgDr7Jt94IEP3n8mwsmT2EqEK08iWk0w7PLqX8n70VltE02EKzURrTsxqU/ffCj5jd3S1jeiA2MObCXCle4UbU4YoJ2eyWuQWjX0elSbHZ1ZkQdqfoSLcG1OEESkiW0F7J+8HdK2THRj3bWJTSFGeneywsELpXI8u0r78W7FmqvvTiDiW6xFagGCY9BR+Nhh79pbrAFOcv17YlwHwonG1PeEAb7ICIAvNFKC3KZI6TYx8WVngBMkFchpijPmvrENkMsUJd2FbkOO6/mwECP/dhgg72P6fye34YvwCnwRXoEvwivwRXgF/4GIQvkD3VQexlzXNlYAAAAASUVORK5CYII=" InformativeScreenshot="18b20409cfcba53a0b400f1b6948bbca.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_2607385767750047744' title='JD Edwards' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT TE_FAST_PATH_BOX'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="333.6,218.4" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Text="P01012" Version="V1">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeowpBackButtonProtect=PROTECTED" DesignTimeRectangle="433, 155, 278, 34" ElementType="InputBox" FriendlyName="'INPUT TE_FAST_PATH_BOX'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" Guid="19a50b6c-4801-4790-bf12-83b81223a6df" ImageBase64="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" InformativeScreenshot="0dbd2e1d0967b7cdf031c554b1e4cf93.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_2607385767750047744' title='JD Edwards' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ClickType="Single" DisplayName="Click 'A fastPathButton'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeowpBackButtonProtect=PROTECTED" DesignTimeRectangle="669, 158, 38, 29" FriendlyName="'A fastPathButton'" FullSelectorArgument="&lt;webctrl id='fastPathButton' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl id='fastPathButton' tag='A' type='' aaname='Fast Path' /&gt;" Guid="d011a52e-1ddd-4c1c-9f57-c178c16b908e" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAhCAYAAACvBDmYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALJSURBVFhH1ZjLchJBFIbzMK59D5duLbcu3VmlK8t3MBtfwSrNQsvShJhKwk2k5gYJDAzDIDAQ7pCQBCbD7+lOKENolCEUMl31rWi6v+k+fc5Mbzx49BzrxsPHL/D01Vt82I5i3DaqnRHWDcPu431AwZOXm3j25h0uB856it7m9eZHLrv2ogy2sr4QZWHgC1EWs74QZfhTdCsQmfhxXiotF5pRxaf9OLZDKvRCG+WmI+y7KEsRtVtXULNVfA1KUNN5HEoZLl6oXwr7L8LSRDUS3Y0qaLS7UPU8wqoBSS/DtM+E//GKJ9FK2xVS5itawUE8yctdp3cGjWQjSpYeoIJ85Yw/jGjMefEkWqoP8Kt2MYV1cg41YyMsp7goa4PBEOWTJqSUiZBiIF/t30vWk2hINvAtpGAnok2wG9UQVtIwCvaNJjAajTB0rtDqnkIm2UNJR8pq8tUXjf0vPIl+jx3jh6ajWKlPUKo2cNJo47R/fqP5pzkk22j3KBQsRChuFQqFRQ6ZZ9G0WbxRmL+5tLrskI1lJb0Ek+JWNMcsViI6buyQJTIW9n4eIXZUEM4xi5WKssbCI0VjbAXCwjlmsVJRFqsKpa2DeIrnWNEcs1hNjLoj1JodHqPRRO66alFaE80xi7lFbUrseyQaVdMo2LUJ2MkXnXqeooYOmp0eVSsLsYSJZK6GUmMonONvzC1abjkIUh79cihPEaBcejePuq6LwXDIJVnSZyU1W+zQC8wK8iirLCxh34Vto0Ixd7sy9c8v+GpLxyatpMX7sHIrGncePInOgm2lkrURko65JFtFJW3ynJnMVXmJXXQlxyxVdD+W4IdGoa2OajlehZik6D9eWY5o81p0OyzzrQ7KGX5oivQSI+q/CEsSdSDrNj7TG/5OJIFMqUtZ4n5bfZcJ0XXFN1+hvvmu98VNyVrfPQlv80T3k/+b6ftR4DcURO1QG0e05wAAAABJRU5ErkJggg==" InformativeScreenshot="46b7809bf62864b990316a2640cf1317.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_2607385767750047744' title='JD Edwards' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ClickType="Single" DisplayName="Click 'IMG hc_Add'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="d1bc0f98-de0d-4b00-be65-903eaffa6301" Version="V1">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="http://rstweb920.rst.solutions:3334/jde/RunApp.mafService?e1UserActInfo=true&amp;e1.mode=view&amp;e1.namespace=&amp;RENDER_MAFLET=E1Menu&amp;e1.state=maximized&amp;e1.service=RunApp&amp;RID=ab63963ec32bbc8c" DesignTimeRectangle="336, 222, 25, 25" ElementType="Icon" FriendlyName="'IMG hc_Add'" FullSelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl aria-role='button' id='hc_Add' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl id='e1menuAppIframe' tag='IFRAME' /&gt;&lt;webctrl aria-role='button' id='hc_Add' tag='IMG' type='' aaname='Add (Ctrl+Alt+A)' /&gt;" Guid="601c9ec5-37c0-4ae5-8929-6b625d1a6229" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAB0AAAAdCAYAAABWk2cPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACMSURBVEhLY/g/AGDUUpqCUUtpCsiy9Obrm/9PPT4FpskBZFnavL/5v/8SfzBNDhi1FC8YtZRYMHgsBeU/kIG4sPNc5/8a/RpgGps8DOPKx1gtBWV8kE9wYZCFEu0SYBqbPAyDzMEGBo9PCQGQgSCfgGhywKileMGopcSCoWMpKP/RveVAKRgplv7/DwAsvoufR8Fx1AAAAABJRU5ErkJggg==" InformativeScreenshot="a859472e8ef2ac91e0886d75d547e602.png" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_2607385767750047744' title='Work With Addresses' /&gt;" SearchSteps="FuzzySelector, Image" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="189169f1fa48e6c37381bf9a9c353652.png" Selector="&lt;html app='chrome.exe' htmlwindowname='E1MENUMAIN_3621604959390118912' title='JD Edwards'/&gt;" Url="http://rstweb920.rst.solutions:3334/jde/E1Menu.maf?jdeLoginAction=LOGOUT&amp;RENDER_MAFLET=E1Menu" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
